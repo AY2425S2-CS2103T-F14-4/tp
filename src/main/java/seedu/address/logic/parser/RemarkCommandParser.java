@@ -2,6 +2,8 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_REMARK;
+import static seedu.address.logic.parser.ParserUtil.parseRemark;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.exceptions.IllegalValueException;
@@ -9,8 +11,6 @@ import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.logic.commands.RemarkCommand;
 
 public class RemarkCommandParser {
-
-    public static final Prefix PREFIX_REMARK = new Prefix("r/");
 
     public RemarkCommand parse(String args) throws ParseException {
         requireNonNull(args);
@@ -27,7 +27,7 @@ public class RemarkCommandParser {
 
         String remark = argMultimap.getValue(PREFIX_REMARK).orElse("");
 
-        return new RemarkCommand(index, remark);
+        return new RemarkCommand(index, parseRemark(remark));
     }
 
 }
