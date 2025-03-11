@@ -2,6 +2,11 @@ package seedu.address.model.person;
 
 import java.util.Objects;
 
+/**
+ * Represents a Remark for a person in the address book.
+ * A Remark is an optional additional note associated with a person.
+ * It is immutable once created.
+ */
 public class Remark {
     public final String value;
 

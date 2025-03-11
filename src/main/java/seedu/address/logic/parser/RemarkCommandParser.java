@@ -7,6 +7,9 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.RemarkCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
+/**
+ * Parses user input to create a {@code RemarkCommand}.
+ */
 
 public class RemarkCommandParser implements Parser<RemarkCommand> {
 

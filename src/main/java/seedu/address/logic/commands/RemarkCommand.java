@@ -10,7 +10,6 @@ import seedu.address.model.Model;
  * Represents a command that allows users to add or update remarks for a contact.
  */
 
-
 public class RemarkCommand extends Command {
     public static final String COMMAND_WORD = "remark";
     public static final String MESSAGE_USAGE = COMMAND_WORD
@@ -23,6 +22,14 @@ public class RemarkCommand extends Command {
 
     private final Index index;
     private final String remark;
+
+    /**
+     * Creates a RemarkCommand with the specified {@code index} and {@code remark}.
+     *
+     * @param index  The index of the person to whom the remark is to be added.
+     * @param remark The remark to be added.
+     * @throws NullPointerException if any of the parameters are null.
+     */
 
     public RemarkCommand(Index index, String remark) {
         requireAllNonNull(index, remark);
