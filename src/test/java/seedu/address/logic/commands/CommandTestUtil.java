@@ -39,14 +39,14 @@ public class CommandTestUtil {
     public static final String VALID_CATEGORY_AMY = "Client";
     public static final String VALID_CATEGORY_BOB = "Investor";
 
-    public static final String NAME_DESC_AMY = " n/" + VALID_NAME_AMY;
-    public static final String NAME_DESC_BOB = " n/" + VALID_NAME_BOB;
-    public static final String PHONE_DESC_AMY = " p/" + VALID_PHONE_AMY;
-    public static final String PHONE_DESC_BOB = " p/" + VALID_PHONE_BOB;
-    public static final String EMAIL_DESC_AMY = " e/" + VALID_EMAIL_AMY;
-    public static final String EMAIL_DESC_BOB = " e/" + VALID_EMAIL_BOB;
-    public static final String ADDRESS_DESC_AMY = " a/" + VALID_ADDRESS_AMY;
-    public static final String ADDRESS_DESC_BOB = " a/" + VALID_ADDRESS_BOB;
+    public static final String NAME_DESC_AMY = " -n " + VALID_NAME_AMY;
+    public static final String NAME_DESC_BOB = "  -n " + VALID_NAME_BOB;
+    public static final String PHONE_DESC_AMY = " -p " + VALID_PHONE_AMY;
+    public static final String PHONE_DESC_BOB = " -p " + VALID_PHONE_BOB;
+    public static final String EMAIL_DESC_AMY = "  -e " + VALID_EMAIL_AMY;
+    public static final String EMAIL_DESC_BOB = "  -e " + VALID_EMAIL_BOB;
+    public static final String ADDRESS_DESC_AMY = "  -a " + VALID_ADDRESS_AMY;
+    public static final String ADDRESS_DESC_BOB = " -a " + VALID_ADDRESS_BOB;
     public static final String CATEGORY_DESC_AMY = " -c " + VALID_CATEGORY_AMY;
     public static final String CATEGORY_DESC_BOB = " -c " + VALID_CATEGORY_BOB;
 
