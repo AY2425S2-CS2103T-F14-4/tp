@@ -54,6 +54,21 @@ public class AddCommandTest {
     }
 
     @Test
+    public void execute_personWithoutCategory_defaultCategoryAssigned() throws Exception {
+        ModelStubAcceptingPersonAdded modelStub = new ModelStubAcceptingPersonAdded();
+        Person personWithoutCategory = new PersonBuilder().withNoCategory().build();
+        AddCommand addCommand = new AddCommand(personWithoutCategory);
+
+        CommandResult commandResult = addCommand.execute(modelStub);
+
+        assertEquals(String.format(AddCommand.MESSAGE_SUCCESS, Messages.format(personWithoutCategory)),
+                commandResult.getFeedbackToUser());
+        assertTrue(modelStub.personsAdded.get(0).getCategory().isPresent());
+        assertEquals("Other", modelStub.personsAdded.get(0).getCategory().get().categoryName);
+    }
+
+
+    @Test
     public void equals() {
         Person alice = new PersonBuilder().withName("Alice").build();
         Person bob = new PersonBuilder().withName("Bob").build();

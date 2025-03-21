@@ -52,9 +52,8 @@ public class AddCommandParser implements Parser<AddCommand> {
         if (argMultimap.getValue(PREFIX_CATEGORY).isPresent()) {
             category = Optional.ofNullable(ParserUtil.parseCategory(argMultimap.getValue(PREFIX_CATEGORY).get()));
         } else {
-            category = Optional.empty();
+            category = Optional.of(new Category("Other"));
         }
-
         Person person = new Person(name, phone, email, address, tagList, category);
 
         return new AddCommand(person);
@@ -67,5 +66,7 @@ public class AddCommandParser implements Parser<AddCommand> {
     private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {
         return Stream.of(prefixes).allMatch(prefix -> argumentMultimap.getValue(prefix).isPresent());
     }
+
+
 
 }
