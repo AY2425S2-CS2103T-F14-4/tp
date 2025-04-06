@@ -16,12 +16,11 @@ Model -> UniquePersonList: contains(person)
 UniquePersonList -> Person: isDuplicateOf(person)
 
 alt Duplicate Found
-    UniquePersonList -> Model: return true
-    Model -> AddCommand: duplicate found
-    AddCommand -> LogicManager: throws CommandException
+    UniquePersonList --> Model: true
+    Model --> AddCommand: duplicate found
+    AddCommand --> LogicManager: throws CommandException
 else No Duplicate
-    UniquePersonList -> Model: return false
+    UniquePersonList --> Model: false
     AddCommand -> Model: addPerson(person)
 end
 @enduml
-
