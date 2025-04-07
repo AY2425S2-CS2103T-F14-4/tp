@@ -1,3 +1,17 @@
+' Enable dark theme
+skinparam backgroundColor #1e1e1e
+skinparam sequence {
+  LifeLineBorderColor White
+  LifeLineBackgroundColor #2d2d2d
+  ParticipantBorderColor White
+  ParticipantBackgroundColor #2d2d2d
+  ActorBorderColor White
+  ActorBackgroundColor #2d2d2d
+  ArrowColor White
+  FontColor White
+  BoxBackgroundColor #2d2d2d
+  BoxBorderColor White
+}
 @startuml
 actor User
 participant LogicManager
