@@ -557,8 +557,7 @@ Team size: 4
 | * *      | 100th time user     | export my contacts, events, and interaction history        | share or back up important data                                   |
 | * *      | 100th time user     | receive reminders for important client anniversaries       | strengthen client relationships with personalized attention       |
 
-
-## **Use Cases**
+### **Use Cases**
 
 *(For all use cases below, the **System** is `TrackUp`, and the **Actor** is the `User`, unless specified otherwise.)*
 
@@ -624,16 +623,16 @@ Team size: 4
     - 3c1. TrackUp shows an error message specifying the issue.
     - Use case resumes at step 2.
 
-### Use Case: Delete a Contact
+**Use Case: Delete a Contact**
 
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to list contacts.
 2. TrackUp displays a list of contacts.
 3. User requests to delete a specific contact in the list.
 4. TrackUp deletes the contact and displays a confirmation message.
    Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. The contact list is empty.
     - Use case ends.
 
@@ -641,16 +640,16 @@ Team size: 4
     - 3a1. TrackUp shows an error message: `"The person index provided is invalid"`
     - Use case resumes at step 2.
 
-### Use Case: Add an Event
+**Use Case: Add an Event**
 
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to add an event.
 2. TrackUp creates the event and links the specified contacts.
 3. TrackUp updates the weekly calendar view and events list to display the new event.
 4. TrackUp displays a confirmation message.
 Use case ends.
 
-#### Extensions
+**Extensions**
 - 1a. The start datetime is after the end datetime.
   - 1a1. TrackUp shows an error message: `"End datetime provided is before start datetime"`
   - Use case resumes at step 1.
@@ -659,9 +658,9 @@ Use case ends.
   - 1b1. TrackUp shows an error message: `"The person index provided is invalid"`
   - Use case resumes at step 1.
 
-### Use Case: Delete an Event
+**Use Case: Delete an Event**
 
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to delete an event.
 2. TrackUp finds all matching events.
 3. TrackUp deletes all occurrences of the matching events.
@@ -669,7 +668,7 @@ Use case ends.
 5. TrackUp displays a confirmation message.
 Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. No matching events are found.
   - 2a1. TrackUp shows a message: `"No matching events found"`
   - Use case ends.
@@ -721,8 +720,6 @@ Use case ends.
 **Scalability & Stability**
 1. Scalability: The application should handle an increasing number of contacts and events without performance degradation.
 2. Stability: The application should function without crashes or major bugs under normal operating conditions.
-
-*{More to be added}*
 
 ### Glossary
 
