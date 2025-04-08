@@ -189,9 +189,7 @@ Classes used by multiple components are in the `trackup.commons` package.
 
 This section describes some noteworthy details on how certain features are implemented.
 
-## **Implementation Details**
-
-### **Undo/Redo Feature (Proposed)**
+### \[Proposed\] Undo/redo feature
 
 - Implemented in `VersionedTrackUp`, extending `TrackUp`.
 - Stores history as an `addressBookStateList` with a `currentStatePointer`.
