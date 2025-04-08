@@ -36,18 +36,6 @@ Refer to the guide [_Setting up and getting started_](SettingUp.md).
 :bulb: **Tip:** The `.puml` files used to create diagrams in this document `docs/diagrams` folder. Refer to the [_PlantUML Tutorial_ at se-edu/guides](https://se-education.org/guides/tutorials/plantUml.html) to learn how to create and edit diagrams.
 </div>
 
-### AddCommand Sequence Diagram
-
-The following sequence diagram illustrates the process of adding a contact and how duplicate checking is performed:
-
-![AddCommand Sequence Diagram](images/AddCommandSequenceDiagram.png)
-
-### DeleteByCommand Sequence Diagram
-
-The following diagram illustrates how the `deleteby` command is parsed and executed.
-
-![DeleteByCommand Sequence Diagram](images/DeleteByCommandSequenceDiagram.png)
-
 ### Architecture
 
 <img src="images/ArchitectureDiagram.png" width="500" />
@@ -65,7 +53,7 @@ Given below is a quick overview of main components and how they interact.
     - [**`Storage`**](#storage-component): Reads and writes data to disk.
 - [**`Commons`**](#common-classes) contains utility classes shared across components.
 
-## **How Components Interact**
+**How Components Interact**
 Below is a *Sequence Diagram* showing how TrackUp processes the command `delete 1`:
 
 <img src="images/ArchitectureSequenceDiagram.png" width="700" />
@@ -77,10 +65,6 @@ Each component:
 For example, `Logic` defines its API in `Logic.java` and implements it in `LogicManager.java`.
 
 <img src="images/ComponentManagers.png" width="500" />
-
----
-
-## **Component Breakdown**
 
 ### UI component
 
@@ -182,6 +166,18 @@ The `Storage` component,
 ### Common classes
 
 Classes used by multiple components are in the `trackup.commons` package.
+
+### AddCommand Sequence Diagram
+
+The following sequence diagram illustrates the process of adding a contact and how duplicate checking is performed:
+
+![AddCommand Sequence Diagram](images/AddCommandSequenceDiagram.png)
+
+### DeleteByCommand Sequence Diagram
+
+The following diagram illustrates how the `deleteby` command is parsed and executed.
+
+![DeleteByCommand Sequence Diagram](images/DeleteByCommandSequenceDiagram.png)
 
 ---
 
