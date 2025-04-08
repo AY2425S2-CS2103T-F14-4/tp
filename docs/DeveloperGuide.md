@@ -562,11 +562,9 @@ Team size: 4
 
 *(For all use cases below, the **System** is `TrackUp`, and the **Actor** is the `User`, unless specified otherwise.)*
 
----
+**Use Case: Add a Tag to a Contact**
 
-### Use Case: Add a Tag to a Contact
-
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to list contacts.
 2. TrackUp displays a list of contacts.
 3. User requests to add a tag to a specific contact in the list.
@@ -574,75 +572,57 @@ Team size: 4
 
    Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. The contact list is empty.
-    - 2a1. TrackUp shows: `"No contacts found."`
     - Use case ends.
 
 - 3a. The specified contact index is invalid.
-    - 3a1. TrackUp shows an error message: `"Invalid contact index. Please enter a valid number."`
+    - 3a1. TrackUp shows an error message: `"The person index provided is invalid"`
     - Use case resumes at step 2.
 
-- 3b. The tag already exists.
-    - 3b1. TrackUp shows a message: `"This tag is already assigned to the contact."`
-    - Use case resumes at step 2.
+**Use Case: View All Contacts**
 
----
-
-### Use Case: View All Contacts
-
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to view all contacts.
 2. TrackUp displays all contacts.
    Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. The contact list is empty.
     - Use case ends.
 
----
+**Use Case: View Contacts with Client Category**
 
-### Use Case: View Contacts with Client Category
-
-#### Main Success Scenario (MSS)
+**Main Success Scenario (MSS)**
 1. User requests to view contacts with the category `Client`.
 2. TrackUp displays only the contacts categorised as `Client`.
    Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. The contact list under the `Client` category is empty.
     - Use case ends.
 
----
+**Use Case: Edit a Contact**
 
-### Use Case: Edit a Contact
-
-#### Main Success Scenario (MSS)
-1. User requests to list all contacts.
-2. TrackUp displays the list of contacts.
+**Main Success Scenario (MSS)**
+1. User requests to list contacts.
+2. TrackUp displays a list of contacts.
 3. User requests to edit a specific contact in the list, specifying the new details.
 4. TrackUp updates the contact's details.
 5. TrackUp displays a confirmation message.
    Use case ends.
 
-#### Extensions
+**Extensions**
 - 2a. The contact list is empty.
-    - 2a1. TrackUp shows a message: `"No contacts found."`
     - Use case ends.
 
 - 3a. The specified contact index is invalid.
-    - 3a1. TrackUp shows an error message: `"Invalid contact index. Please enter a valid number."`
+    - 3a1. TrackUp shows an error message: `"The person index provided is invalid"`
     - Use case resumes at step 2.
 
-- 3b. The new details are the same as the existing details.
-    - 3b1. TrackUp shows a message: `"No changes detected. Contact remains unchanged."`
-    - Use case ends.
-
-- 3c. The new details contain invalid inputs (e.g., incorrect phone format, missing required fields).
+- 3b. The new details contain invalid inputs (e.g., incorrect phone format, missing required fields).
     - 3c1. TrackUp shows an error message specifying the issue.
     - Use case resumes at step 2.
-
----
 
 ### Use Case: Delete a Contact
 
@@ -655,26 +635,18 @@ Team size: 4
 
 #### Extensions
 - 2a. The contact list is empty.
-    - 2a1. TrackUp shows: `"No contacts found."`
     - Use case ends.
 
 - 3a. The given index is invalid.
-    - 3a1. TrackUp shows an error message: `"Invalid contact index. Please enter a valid number."`
+    - 3a1. TrackUp shows an error message: `"The person index provided is invalid"`
     - Use case resumes at step 2.
-
-- 3c. The contact is referenced by an event or another entity.
-    - 3c1. TrackUp shows: `"The contact Amy Lee could not be deleted as it is referenced by event: Pitch Call."`
-    - Use case ends.
-
-
----
 
 ### Use Case: Add an Event
 
 #### Main Success Scenario (MSS)
 1. User requests to add an event.
 2. TrackUp creates the event and links the specified contacts.
-3. TrackUp updates the weekly calendar view to display the new event.
+3. TrackUp updates the weekly calendar view and events list to display the new event.
 4. TrackUp displays a confirmation message.
 Use case ends.
 
@@ -687,21 +659,19 @@ Use case ends.
   - 1b1. TrackUp shows an error message: `"The person index provided is invalid"`
   - Use case resumes at step 1.
 
----
-
 ### Use Case: Delete an Event
 
 #### Main Success Scenario (MSS)
 1. User requests to delete an event.
 2. TrackUp finds all matching events.
 3. TrackUp deletes all occurrences of the matching events.
-4. TrackUp updates the weekly calendar view to remove the deleted events.
+4. TrackUp updates the weekly calendar view and events list to remove the deleted events.
 5. TrackUp displays a confirmation message.
 Use case ends.
 
 #### Extensions
 - 2a. No matching events are found.
-  - 2a1. TrackUp shows a message: `"No matching events found."`
+  - 2a1. TrackUp shows a message: `"No matching events found"`
   - Use case ends.
 
 ### Non-Functional Requirements
