@@ -67,6 +67,8 @@ For example, `Logic` defines its API in `Logic.java` and implements it in `Logic
 
 <img src="images/ComponentManagers.png" width="500" />
 
+The sections below give more details of each component.
+
 ### UI component
 
 The **API** of this component is specified in [`Ui.java`](https://github.com/AY2425S2-CS2103T-F14-4/tp/blob/master/src/main/java/trackup/ui/Ui.java)
