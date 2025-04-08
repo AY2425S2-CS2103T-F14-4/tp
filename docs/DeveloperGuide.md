@@ -116,12 +116,12 @@ How the parsing works:
 * When called upon to parse a user command, the `AddressBookParser` class creates an `XYZCommandParser` (`XYZ` is a placeholder for the specific command name e.g., `AddCommandParser`) which uses the other classes shown above to parse the user command and create a `XYZCommand` object (e.g., `AddCommand`) which the `AddressBookParser` returns back as a `Command` object.
 * All `XYZCommandParser` classes (e.g., `AddCommandParser`, `DeleteCommandParser`, ...) inherit from the `Parser` interface so that they can be treated similarly where possible e.g, during testing.
 
-### `AddCommandParser` Logic Enhancement
+#### `AddCommandParser` Logic Enhancement
 - The `AddCommandParser` validates required fields (name, phone, email, address) individually
   and throws descriptive error messages for each missing attribute.
 - This improves user feedback and avoids a generic format error.
 
-### DeleteByCommand Logic
+#### DeleteByCommand Logic
 - The `DeleteByCommand` performs exact matching across multiple attributes.
 - If no attributes are provided, an error is thrown.
 - If multiple contacts match the criteria, a warning message is shown.
@@ -149,7 +149,7 @@ The `Model` component,
 
 </div>
 
-### Class Diagram of DeleteByCommand and Related Model Interactions
+#### Class Diagram of DeleteByCommand and Related Model Interactions
 
 The following diagram shows the relationship between `DeleteByCommand` and core model classes.
 
