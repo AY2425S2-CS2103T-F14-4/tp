@@ -19,7 +19,7 @@ title: Developer Guide
   - The **[JUnit 5 (JUnit Jupiter)](https://junit.org/junit5/)** testing framework was reused for unit and integration tests.
   - The **[Mockito](https://site.mockito.org/)** testing library was reused for writing mock-based unit tests, particularly for logic and command tests.
   - The **[Jackson](https://github.com/FasterXML/jackson)** library was reused for JSON (de)serialisation of events, contacts, and application data.
-  - The [OpenJFX (JavaFX)](https://openjfx.io/) library was reused for building the GUI. Components like ListView, VBox, and FXML were adapted with custom designs.
+  - The **[OpenJFX (JavaFX)](https://openjfx.io/)** library was reused for building the GUI. Components like ListView, VBox, and FXML were adapted with custom designs.
 
 ---
 
