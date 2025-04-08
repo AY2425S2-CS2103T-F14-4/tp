@@ -557,7 +557,7 @@ Team size: 4
 | * *      | 100th time user     | export my contacts, events, and interaction history        | share or back up important data                                   |
 | * *      | 100th time user     | receive reminders for important client anniversaries       | strengthen client relationships with personalized attention       |
 
-### **Use Cases**
+### Use Cases
 
 *(For all use cases below, the **System** is `TrackUp`, and the **Actor** is the `User`, unless specified otherwise.)*
 
