@@ -54,6 +54,7 @@ Given below is a quick overview of main components and how they interact.
 - [**`Commons`**](#common-classes) contains utility classes shared across components.
 
 **How Components Interact**  
+
 Below is a *Sequence Diagram* showing how TrackUp processes the command `delete 1`:
 
 <img src="images/ArchitectureSequenceDiagram.png" width="700" />
